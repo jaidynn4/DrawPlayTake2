@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
@@ -14,9 +15,9 @@ public class MyDrawing extends JPanel {
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
-		cat.draw(g, 50, 50);
-		cat.draw(g,  50, 175);
-		cat.draw(g, 200, 200);
+		cat.draw(g, 50, 50, Color.black);
+		cat.draw(g,  50, 175, Color.magenta);
+		cat.draw(g, 200, 200, Color.darkGray);
 	}
 	
 	/**

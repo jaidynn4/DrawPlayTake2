@@ -21,13 +21,13 @@ public class Cat {
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 	
 	// draw will render the Cat on the Graphics object
-	public void draw(Graphics g, int catX, int catY)
+	public void draw(Graphics g, int catX, int catY, Color furColor)
 	{
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.black);
+		g2.setColor(furColor);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
 		g2.setColor(Color.green);
