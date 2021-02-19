@@ -26,6 +26,12 @@ public class Cat {
 	private static final int NOSE_HEIGHT = 10;
 	private static final int NOSE_WIDTH = 5;
 	
+	// New addition - ears (two triangles the same size as the eyes sticking straight up from the top of the head)
+	private static final int EAR_ONE_Y = HEAD_DIMENSION/5;
+	private static final int EAR_ONE_X = HEAD_DIMENSION/5;
+	private static final int EAR_TWO_Y = HEAD_DIMENSION/6;
+	private static final int EAR_TWO_X = HEAD_DIMENSION/2;
+	
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY, Color furColor)
 	{
@@ -51,6 +57,17 @@ public class Cat {
 		x = catX + NOSE_X;
 		y = catY + NOSE_Y;
 		g2.fillOval(x, y, NOSE_WIDTH, NOSE_HEIGHT);
+		
+		
+		g2.setColor(furColor);
+		x = catX + EAR_ONE_X;
+		y = catY + EAR_ONE_Y;
+		g2.fillPolygon(new int[] {x-5, x, x+5}, new int[] {y, y-30, y}, 3);
+		x = catX + EAR_TWO_X;
+		y = catY + EAR_TWO_Y;
+		g2.fillPolygon(new int[] {x-5, x, x+5}, new int[] {y, y-30, y}, 3);
+		
+		
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
